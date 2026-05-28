@@ -121,6 +121,31 @@
         </div>
 
         <aside class="hero-card" aria-label="가이드 요약">
+          <figure class="character-profile" data-loaded="false">
+            <div class="character-portrait">
+              <img
+                src="/characters/jaemin.png"
+                alt="송악동 — 메이플 플래닛 표창도적"
+                width="120"
+                height="120"
+                loading="eager"
+                decoding="async"
+                onload="this.closest('.character-profile').dataset.loaded='true'"
+                onerror="this.style.display='none'"
+              />
+              <span class="character-placeholder" aria-hidden="true">
+                <svg viewBox="0 0 32 32" width="40" height="40">
+                  <path d="M16 5 L18.2 12.4 L25.8 11.4 L20.2 16 L25.8 20.6 L18.2 19.6 L16 27 L13.8 19.6 L6.2 20.6 L11.8 16 L6.2 11.4 L13.8 12.4 Z" fill="#FFB800" opacity="0.7"/>
+                </svg>
+              </span>
+            </div>
+            <figcaption class="character-info">
+              <span class="character-tag">현재 캐릭터</span>
+              <strong class="character-name">송악동</strong>
+              <span class="character-meta">Lv. 70 · 표창도적 (허밋)</span>
+            </figcaption>
+          </figure>
+
           <header class="hero-card-head">
             <span class="badge badge-yellow">SUMMARY</span>
             <h2>한눈에 보는 표창도적</h2>
@@ -763,6 +788,21 @@
               <div class="card-tag">★ 최우선 마스터</div>
               <h3 class="card-title">트리플 스로우 (Triple Throw)</h3>
               <p class="card-desc">럭키 세븐을 완전히 대체하는 단일 딜링의 정점. 쉐도우 파트너와 결합 시 누적 타격 수가 폭발적으로 증가.</p>
+              <figure class="icon-strip">
+                <div class="icon-strip-item">
+                  <img src="/images/skills/quadruple-throw.gif" alt="트리플 스로우" loading="lazy" decoding="async" />
+                  <span>트리플 스로우</span>
+                </div>
+                <div class="icon-strip-item">
+                  <img src="/images/skills/shadow-partner.gif" alt="쉐도우 파트너" loading="lazy" decoding="async" />
+                  <span>쉐도우 파트너</span>
+                </div>
+                <div class="icon-strip-item">
+                  <img src="/images/skills/javelin-expert.gif" alt="자벨린 엑스퍼트" loading="lazy" decoding="async" />
+                  <span>자벨린 엑스퍼트</span>
+                </div>
+                <figcaption>4차 핵심 스킬 · 아이콘은 가장 가까운 동일 계열로 대체 · 이미지 출처 <a href="https://maple.inven.co.kr/" target="_blank" rel="noopener">메이플 인벤</a></figcaption>
+              </figure>
               <ol class="ordered-skill">
                 <li><span>1</span> 트리플 스로우 → 마스터까지 직행</li>
                 <li><span>2</span> 메이플 플래닛 999,999 맥뎀과 시너지 극대화</li>
@@ -782,6 +822,29 @@
                 <div class="card-tag tag-soft">스킬북 파밍</div>
                 <h3 class="card-title">4차 추가 스킬</h3>
                 <p class="card-desc">트리플 스로우 마스터 이후 보스/사냥터에서 순차적으로 스킬북을 파밍해 채우는 단계.</p>
+                <figure class="icon-strip">
+                  <div class="icon-strip-item">
+                    <img src="/images/skills/maple-hero.gif" alt="메이플 용사" loading="lazy" decoding="async" />
+                    <span>메이플 용사</span>
+                  </div>
+                  <div class="icon-strip-item">
+                    <img src="/images/skills/showdown.gif" alt="쇼다운" loading="lazy" decoding="async" />
+                    <span>쇼다운</span>
+                  </div>
+                  <div class="icon-strip-item">
+                    <img src="/images/skills/fake.gif" alt="페이크" loading="lazy" decoding="async" />
+                    <span>페이크</span>
+                  </div>
+                  <div class="icon-strip-item">
+                    <img src="/images/skills/fatal-venom.gif" alt="베놈" loading="lazy" decoding="async" />
+                    <span>베놈</span>
+                  </div>
+                  <div class="icon-strip-item">
+                    <img src="/images/skills/heros-will.gif" alt="용사의 의지" loading="lazy" decoding="async" />
+                    <span>용사의 의지</span>
+                  </div>
+                  <figcaption>스킬북 파밍 대상 · 이미지 출처 <a href="https://maple.inven.co.kr/" target="_blank" rel="noopener">메이플 인벤</a></figcaption>
+                </figure>
                 <ul class="bullets">
                   <li><strong>스피릿 자벨린</strong> · 표창 소모 없이 무한 투척</li>
                   <li><strong>베놈</strong> · 지속적인 독 피해 (DoT)</li>
@@ -824,6 +887,13 @@
             <span class="timeline-marker timeline-marker-current">60 ~ 75 · 현재</span>
             <article class="card timeline-card card-highlight">
               <h3 class="card-title">7층 8층 A구역 (CD)</h3>
+              <figure class="icon-strip icon-strip-mob">
+                <div class="icon-strip-item">
+                  <img src="/images/maps/cd-monster.gif" alt="최신곡 CD" loading="lazy" decoding="async" />
+                  <span>최신곡 CD</span>
+                </div>
+                <figcaption>대표 몬스터 · 이미지 출처 <a href="https://maple.inven.co.kr/" target="_blank" rel="noopener">메이플 인벤</a></figcaption>
+              </figure>
               <ul class="route-list">
                 <li><span class="route-key">사냥터</span><span class="route-val">7층 8층 A구역 (개인화 X)</span></li>
                 <li><span class="route-key">팁</span><span class="route-val">1층에만 몬스터 젠 → 럭키 세븐 타겟팅 분산이 적어 최고 성장 속도</span></li>
@@ -838,6 +908,13 @@
               <div class="card-tag tag-soft">3차 전직 · 허밋</div>
               <h3 class="card-title">뉴트 보호구역 ☆ (망용둥 / 위둥)</h3>
               <p class="card-desc">표창도적 전성기. 쉐도우 파트너 + 알까기(낚시 사냥)로 약한 체력의 약점이 완전히 지워지는 구간.</p>
+              <figure class="icon-strip icon-strip-mob">
+                <div class="icon-strip-item">
+                  <img src="/images/maps/serph.gif" alt="세르프" loading="lazy" decoding="async" />
+                  <span>세르프 (대표)</span>
+                </div>
+                <figcaption>미나르숲 대표 몬스터 · 이미지 출처 <a href="https://maple.inven.co.kr/" target="_blank" rel="noopener">메이플 인벤</a></figcaption>
+              </figure>
               <ul class="route-list">
                 <li><span class="route-key">사냥터</span><span class="route-val">미나르숲 · 개인화 필드(☆)</span></li>
                 <li><span class="route-key">메커니즘</span><span class="route-val">특정 구조물에 올라 무피격 원거리 타격 — 알까기</span></li>
@@ -852,6 +929,17 @@
               <div class="card-tag tag-soft">4차 전직 · 나이트로드</div>
               <h3 class="card-title">부활하는 기억 ☆ → 망각의 길 2, 4</h3>
               <p class="card-desc">트리플 스로우의 막강한 화력을 시간의 신전에서 터뜨리는 구간.</p>
+              <figure class="icon-strip icon-strip-mob">
+                <div class="icon-strip-item">
+                  <img src="/images/maps/memory-priest.gif" alt="추억의 신관" loading="lazy" decoding="async" />
+                  <span>추억의 신관</span>
+                </div>
+                <div class="icon-strip-item">
+                  <img src="/images/maps/regret-priest.gif" alt="후회의 신관" loading="lazy" decoding="async" />
+                  <span>후회의 신관</span>
+                </div>
+                <figcaption>시간의 신전 대표 몬스터 · 이미지 출처 <a href="https://maple.inven.co.kr/" target="_blank" rel="noopener">메이플 인벤</a></figcaption>
+              </figure>
               <ul class="route-list">
                 <li><span class="route-key">사냥터</span><span class="route-val">시간의 신전 (남둥 / 신관 / 수호대장)</span></li>
                 <li><span class="route-key">주력기</span><span class="route-val">트리플 스로우 (마스터) + 쉐도우 파트너</span></li>
@@ -881,6 +969,12 @@
               <span class="timeline-marker">20 ~ 25</span>
               <article class="card timeline-card">
                 <h3 class="card-title">돼지의 해안가</h3>
+                <figure class="icon-strip icon-strip-mob icon-strip-mini">
+                  <div class="icon-strip-item">
+                    <img src="/images/maps/pig.gif" alt="돼지" loading="lazy" decoding="async" />
+                    <span>돼지</span>
+                  </div>
+                </figure>
                 <ul class="route-list">
                   <li><span class="route-key">사냥터</span><span class="route-val">돼지의 해안가</span></li>
                   <li><span class="route-key">팁</span><span class="route-val">파티 사냥 + 엇박자 타이밍으로 표창 소모 절약, 메소·포션 비축</span></li>
@@ -892,6 +986,12 @@
               <span class="timeline-marker">25 ~ 35</span>
               <article class="card timeline-card">
                 <h3 class="card-title">축축한나무숲습지 (좀비버섯)</h3>
+                <figure class="icon-strip icon-strip-mob icon-strip-mini">
+                  <div class="icon-strip-item">
+                    <img src="/images/maps/zombie-mushroom.gif" alt="좀비버섯" loading="lazy" decoding="async" />
+                    <span>좀비버섯</span>
+                  </div>
+                </figure>
                 <ul class="route-list">
                   <li><span class="route-key">사냥터</span><span class="route-val">축축한나무숲습지 · 좀비버섯(Lv. 24)</span></li>
                   <li><span class="route-key">상주 한계</span><span class="route-val">~44레벨 (30레벨 차이 페널티 직전)</span></li>
@@ -904,6 +1004,12 @@
               <span class="timeline-marker">35 ~ 45</span>
               <article class="card timeline-card">
                 <h3 class="card-title">와일드보어의 땅 2</h3>
+                <figure class="icon-strip icon-strip-mob icon-strip-mini">
+                  <div class="icon-strip-item">
+                    <img src="/images/maps/wild-boar.gif" alt="와일드보어" loading="lazy" decoding="async" />
+                    <span>와일드보어</span>
+                  </div>
+                </figure>
                 <ul class="route-list">
                   <li><span class="route-key">사냥터</span><span class="route-val">페리온 동쪽 바위길 3 → 비밀 포탈로 진입</span></li>
                   <li><span class="route-key">팁</span><span class="route-val">맵이 좁고 젠 속도가 빠름 → 위아래 2인 파티 시 경험치 폭발</span></li>
@@ -915,6 +1021,16 @@
               <span class="timeline-marker">45 ~ 60</span>
               <article class="card timeline-card">
                 <h3 class="card-title">사헬지대 ☆ → 치명적 오류 ☆ (C-1, C-2)</h3>
+                <figure class="icon-strip icon-strip-mob icon-strip-mini">
+                  <div class="icon-strip-item">
+                    <img src="/images/maps/sand-mole.gif" alt="모래 두더지" loading="lazy" decoding="async" />
+                    <span>모래 두더지</span>
+                  </div>
+                  <div class="icon-strip-item">
+                    <img src="/images/maps/scorpion.gif" alt="스콜피언" loading="lazy" decoding="async" />
+                    <span>스콜피언</span>
+                  </div>
+                </figure>
                 <ul class="route-list">
                   <li><span class="route-key">사냥터</span><span class="route-val">니할사막 · 개인화 필드(☆) 적용</span></li>
                   <li><span class="route-key">팁</span><span class="route-val">완벽한 1자형 평지 → 이동 점프 럭키 세븐 난사에 최적</span></li>

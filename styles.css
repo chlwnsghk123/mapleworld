@@ -1263,6 +1263,109 @@ img, svg { display: block; }
 }
 
 /* ============================================
+   Character profile (hero card top)
+   ============================================ */
+.character-profile {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 16px;
+  align-items: center;
+  padding: 14px;
+  margin: 0 0 18px;
+  background: linear-gradient(135deg, var(--maple-softer), #FFFFFF 70%);
+  border: 1px solid rgba(255, 184, 0, 0.20);
+  border-radius: var(--radius);
+}
+
+.character-portrait {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background:
+    radial-gradient(80px 60px at 30% 20%, rgba(255,255,255,0.7), transparent 70%),
+    linear-gradient(135deg, var(--maple-soft), var(--maple-yellow) 200%);
+  border: 1px solid rgba(255, 184, 0, 0.30);
+  box-shadow: var(--shadow-xs);
+  flex-shrink: 0;
+}
+
+.character-portrait img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 240ms var(--ease);
+}
+
+.character-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 240ms var(--ease);
+}
+
+.character-profile[data-loaded="true"] .character-portrait img {
+  opacity: 1;
+}
+.character-profile[data-loaded="true"] .character-placeholder {
+  opacity: 0;
+}
+
+.character-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.character-tag {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 3px 10px;
+  background: var(--maple-yellow);
+  color: #5A3700;
+  border-radius: var(--radius-pill);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.character-name {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-strong);
+  line-height: 1.2;
+}
+
+.character-meta {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-soft);
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 540px) {
+  .character-profile {
+    grid-template-columns: 80px 1fr;
+    gap: 12px;
+    padding: 12px;
+  }
+  .character-portrait {
+    width: 80px;
+    height: 80px;
+  }
+  .character-name { font-size: 18px; }
+}
+
+/* ============================================
    Icon strip (item / skill thumbnails)
    ============================================ */
 .icon-strip {
@@ -1294,6 +1397,25 @@ img, svg { display: block; }
   padding: 4px;
   box-shadow: var(--shadow-xs);
   border: 1px solid var(--border);
+}
+.icon-strip-mob .icon-strip-item img {
+  width: 72px;
+  height: 72px;
+  padding: 6px;
+}
+.icon-strip-mob .icon-strip-item {
+  min-width: 80px;
+}
+.icon-strip-mini .icon-strip-item img {
+  width: 56px;
+  height: 56px;
+  padding: 4px;
+}
+.icon-strip-mini .icon-strip-item {
+  min-width: 64px;
+}
+.icon-strip-mini .icon-strip-item span {
+  font-size: 10px;
 }
 .icon-strip-item span {
   font-size: 11px;
