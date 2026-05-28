@@ -1352,6 +1352,20 @@ img, svg { display: block; }
   letter-spacing: -0.01em;
 }
 
+/* Inline source note (e.g., "※ 메이플랜드 자료 차용") */
+.src-note {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 2px 9px;
+  background: var(--surface-soft);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-pill);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-soft);
+  letter-spacing: -0.01em;
+}
+
 /* ============================================
    Class switcher (header)
    ============================================ */
