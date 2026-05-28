@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#3182F6" />
+
+  <title>썬콜 노트 · 메이플 플래닛 아이스/라이트닝 아크메이지 육성 가이드</title>
+  <meta name="description" content="메이플 플래닛 썬콜(아이스/라이트닝 아크메이지) 정석 육성 가이드. 차수별 스킬트리, INT/LUK 스탯 분배, 레벨별 템트리, 사냥터 동선까지 한 페이지에." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:site_name" content="플래닛 노트" />
+  <meta property="og:title" content="썬콜 노트 · 메이플 플래닛 아이스/라이트닝 아크메이지 육성 가이드" />
+  <meta property="og:description" content="스탯 분배·템트리·차수별 스킬·사냥터 동선까지. 썬콜 정석 육성을 한 페이지에." />
+  <meta property="og:image" content="/og-image.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="썬콜 노트 — 메이플 플래닛 아이스/라이트닝 아크메이지 육성 가이드" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="썬콜 노트 · 메이플 플래닛 아이스/라이트닝 아크메이지 육성 가이드" />
+  <meta name="twitter:description" content="스탯 분배·템트리·차수별 스킬·사냥터 동선까지. 썬콜 정석 육성을 한 페이지에." />
+  <meta name="twitter:image" content="/og-image.png" />
+
+  <!-- Icons -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link
+    rel="stylesheet"
+    as="style"
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
+  />
+
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body class="theme-cold">
+  <a class="skip-link" href="#main">본문 바로가기</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="/" class="brand" aria-label="플래닛 노트 홈">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="28" height="28">
+            <defs>
+              <linearGradient id="brandGradCold" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#3182F6" />
+                <stop offset="100%" stop-color="#1B64DA" />
+              </linearGradient>
+            </defs>
+            <rect width="32" height="32" rx="9" fill="url(#brandGradCold)" />
+            <path
+              d="M16 4 L18.6 12 L26.6 12 L20 17 L22.6 25 L16 20 L9.4 25 L12 17 L5.4 12 L13.4 12 Z"
+              fill="#FFFFFF"
+            />
+            <circle cx="16" cy="16" r="2.4" fill="#3182F6" />
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">플래닛 노트</span>
+          <span class="brand-sub">메이플 플래닛 직업별 육성 가이드</span>
+        </span>
+      </a>
+
+      <div class="class-switcher" data-theme="cold" role="group" aria-label="직업 선택">
+        <a href="/" class="cs-link">표도</a>
+        <a href="/suncol" class="cs-link is-active" aria-current="page">썬콜</a>
+      </div>
+
+      <nav class="site-nav" aria-label="섹션 이동">
+        <a href="#stat">스탯</a>
+        <a href="#gear">템트리</a>
+        <a href="#skill">스킬트리</a>
+        <a href="#route">레벨링</a>
+        <a href="#community">참고 자료</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ====================== HERO ====================== -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <span class="eyebrow eyebrow-cold">
+            <span class="dot"></span>
+            MAPLE PLANET · 썬콜 육성 가이드
+          </span>
+          <h1 class="hero-title">
+            한 번의 광역기로<br />
+            <span class="grad-text-cold">필드</span>를 얼린다
+          </h1>
+          <p class="hero-desc">
+            메이플 플래닛에서 썬콜(아이스/라이트닝 아크메이지)을 키울 때
+            필요한 모든 정보를 한 페이지에 모을 예정입니다. 스탯 분배부터
+            차수별 스킬, 콜드빔·체인 라이트닝·블리자드로 이어지는 광역기
+            동선까지 — <strong>docx 자료 도착 후 채워집니다.</strong>
+          </p>
+
+          <div class="hero-cta">
+            <a class="btn btn-cold" href="#stat">가이드 시작하기</a>
+            <a class="btn btn-ghost" href="#community">참고 자료 보기</a>
+          </div>
+
+          <dl class="hero-meta">
+            <div>
+              <dt>마지막 업데이트</dt>
+              <dd>2026 · 05 · 28</dd>
+            </div>
+            <div>
+              <dt>정리된 자료</dt>
+              <dd>준비 중</dd>
+            </div>
+            <div>
+              <dt>대상 직업</dt>
+              <dd>아크메이지 (썬콜)</dd>
+            </div>
+          </dl>
+        </div>
+
+        <aside class="hero-card hero-card-cold" aria-label="가이드 요약">
+          <figure class="character-profile character-profile-cold" data-loaded="false">
+            <div class="character-portrait">
+              <img
+                src="/characters/jaemin-suncol.png"
+                alt="썬콜 캐릭터 — 메이플 플래닛 아크메이지"
+                width="120"
+                height="120"
+                loading="eager"
+                decoding="async"
+                onload="this.closest('.character-profile').dataset.loaded='true'"
+                onerror="this.style.display='none'"
+              />
+              <span class="character-placeholder" aria-hidden="true">
+                <svg viewBox="0 0 32 32" width="44" height="44">
+                  <path d="M16 4 L18.6 12 L26.6 12 L20 17 L22.6 25 L16 20 L9.4 25 L12 17 L5.4 12 L13.4 12 Z" fill="#3182F6" opacity="0.75"/>
+                </svg>
+              </span>
+            </div>
+            <figcaption class="character-info">
+              <span class="character-tag character-tag-cold">현재 캐릭터</span>
+              <strong class="character-name">— TBD —</strong>
+              <span class="character-meta">Lv. ? · 아크메이지 (썬콜)</span>
+            </figcaption>
+          </figure>
+
+          <header class="hero-card-head">
+            <span class="badge badge-blue">SUMMARY</span>
+            <h2>한눈에 보는 썬콜</h2>
+          </header>
+          <ul class="hero-card-list">
+            <li>
+              <span class="hcl-key">주 스탯</span>
+              <span class="hcl-val">INT <em>(부스탯 LUK)</em></span>
+            </li>
+            <li>
+              <span class="hcl-key">강점</span>
+              <span class="hcl-val">광역 빙결 · 텔레포트 기동성</span>
+            </li>
+            <li>
+              <span class="hcl-key">약점</span>
+              <span class="hcl-val">MP 의존 · 단일 보스 딜 한계</span>
+            </li>
+            <li>
+              <span class="hcl-key">코어 아이템</span>
+              <span class="hcl-val">— 자료 정리 중 —</span>
+            </li>
+            <li>
+              <span class="hcl-key">핵심 스킬</span>
+              <span class="hcl-val">콜드빔 → 체인 라이트닝 → 블리자드</span>
+            </li>
+          </ul>
+          <footer class="hero-card-foot">
+            docx 자료 도착 후 각 섹션이 채워집니다.
+          </footer>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ====================== STAT ====================== -->
+    <section id="stat" class="section section-tinted">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-eyebrow">01 · STAT</span>
+          <h2 class="section-title">INT · LUK 스탯 분배</h2>
+          <p class="section-desc">
+            썬콜의 데미지 공식은 <strong>총 매직 어택 × 스킬 계수 × INT</strong>
+            기반이며, 부스탯 LUK은 장비 착용 / 마법 명중에 영향을 줍니다.
+            정석·올인트·하이브리드 분배 비교는 docx 자료 도착 후 채울 예정입니다.
+          </p>
+        </header>
+
+        <div class="compare-grid">
+          <article class="card card-compare card-highlight card-highlight-cold">
+            <header class="compare-head">
+              <span class="badge badge-blue">★ 가장 추천 (예정)</span>
+              <h3>썬콜 스탯 분배 — 자료 정리 중</h3>
+            </header>
+            <p class="card-desc">
+              메이플 플래닛 환경에서 썬콜의 INT 풀투자 vs 부분 LUK 분배의 비교는
+              docx 자료 도착 후 본문에 채워집니다. 일반적인 클래식 메이플 기준
+              차수별 흐름은 다음과 같습니다.
+            </p>
+            <div class="hl-steps hl-steps-cold">
+              <div class="hl-step">
+                <span class="hl-num">1</span>
+                <p><strong>1차 매지션 (8~30)</strong> · INT 풀투자, LUK 0 유지</p>
+              </div>
+              <div class="hl-step">
+                <span class="hl-num">2</span>
+                <p><strong>2차 위자드 (30~70)</strong> · 외부 LUK 수급으로 부스탯 충당</p>
+              </div>
+              <div class="hl-step">
+                <span class="hl-num">3</span>
+                <p><strong>3차 메이지 (70~120)</strong> · 광역기 마스터 시점, 스탯 미세 조정</p>
+              </div>
+              <div class="hl-step">
+                <span class="hl-num">4</span>
+                <p><strong>4차 아크메이지 (120~)</strong> · 블리자드 운용을 위한 잠재 / 스탯 최적화</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <details class="alt-builds">
+          <summary>다른 스탯 분배 방식 보기 <span class="alt-note">· 자료 도착 후 비교 채울 예정</span></summary>
+          <div class="alt-builds-grid">
+            <article class="card card-compare">
+              <header class="compare-head">
+                <span class="badge badge-blue">대안 A</span>
+                <h3>정석 INT/LUK 분배</h3>
+              </header>
+              <p class="card-desc">레벨별 장비 요구 LUK만큼 부스탯 분산. 상세 분배표는 docx 도착 후 정리.</p>
+              <div class="pros-cons">
+                <div>
+                  <h4>장점</h4>
+                  <ul>
+                    <li>장비 착용 안정성</li>
+                    <li>마법 명중률 유지</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>단점</h4>
+                  <ul>
+                    <li>INT 총량 다소 손실</li>
+                    <li>고레벨 마법 데미지 감소</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="card card-compare">
+              <header class="compare-head">
+                <span class="badge badge-blue">대안 B</span>
+                <h3>올인트 (Full INT)</h3>
+              </header>
+              <p class="card-desc">LUK 0 유지, INT 풀투자. 외부 LUK 옵션으로 장비 착용 보완.</p>
+              <div class="pros-cons">
+                <div>
+                  <h4>장점</h4>
+                  <ul>
+                    <li>마법 공격력 극대화</li>
+                    <li>광역 스킬 한방킬 구간 확장</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>단점</h4>
+                  <ul>
+                    <li>외부 LUK 옵션 의존</li>
+                    <li>마법 명중·회피 감소</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+        </details>
+
+        <article class="card card-table-wrap">
+          <header class="card-head">
+            <h3 class="card-title">스탯 분배 비교 — 자료 채울 영역</h3>
+            <p class="card-desc">docx 자료 도착 시 각 대안의 수치와 효율을 비교표로 정리합니다.</p>
+          </header>
+          <div class="table-scroll">
+            <table class="stat-table">
+              <thead>
+                <tr>
+                  <th>구분</th>
+                  <th>INT 투자</th>
+                  <th>LUK 투자</th>
+                  <th>초반 효율</th>
+                  <th>후반 효율</th>
+                  <th>메소 부담</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>정석</td><td colspan="5" class="placeholder-cell">자료 정리 중 — docx 도착 후 채울 행</td></tr>
+                <tr><td>올인트</td><td colspan="5" class="placeholder-cell">자료 정리 중</td></tr>
+                <tr><td>하이브리드</td><td colspan="5" class="placeholder-cell">자료 정리 중</td></tr>
+                <tr><td><strong>추천</strong></td><td colspan="5" class="placeholder-cell">자료 정리 중</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <footer class="sources">
+          <h4>참고 자료</h4>
+          <ul>
+            <li><span class="src-pending">— docx 자료 도착 후 출처 정리 예정 —</span></li>
+            <li><a href="https://namu.wiki/w/%EB%A9%94%EC%9D%B4%ED%94%8C%20%ED%94%8C%EB%9E%98%EB%8B%9B" target="_blank" rel="noopener">메이플 플래닛 — 나무위키 (공통 시스템 참고)</a></li>
+          </ul>
+        </footer>
+      </div>
+    </section>
+
+    <!-- ====================== GEAR ====================== -->
+    <section id="gear" class="section">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-eyebrow">02 · GEAR</span>
+          <h2 class="section-title">레벨 구간별 추천 템트리</h2>
+          <p class="section-desc">
+            완드 / 스태프 · 매직 로브 · 마법사 모자 · 장신구를 레벨별로 정리합니다.
+            아이템 명·이미지·획득처는 docx 자료 도착 후 채워집니다.
+          </p>
+        </header>
+
+        <div class="compare-grid">
+          <article class="card card-compare card-highlight card-highlight-cold">
+            <header class="compare-head">
+              <span class="badge badge-blue">★ 가장 추천 (예정)</span>
+              <h3>썬콜 템트리 — 자료 정리 중</h3>
+            </header>
+            <p class="card-desc">
+              docx 자료 도착 후 무기·방어구·장신구의 추천 라인을 채웁니다.
+            </p>
+            <ul class="bullets">
+              <li><strong>무기</strong> · 완드 / 스태프 (— TBD —)</li>
+              <li><strong>모자</strong> · — TBD —</li>
+              <li><strong>방어구</strong> · 매직 로브 / 매지컬 — TBD —</li>
+              <li><strong>장신구</strong> · INT 옵션 위주 — TBD —</li>
+              <li><strong>장갑</strong> · 마력 떡작 — TBD —</li>
+              <li><strong>잠재</strong> · INT% / 매력 옵션 — TBD —</li>
+            </ul>
+          </article>
+        </div>
+
+        <details class="alt-builds">
+          <summary>다른 템트리 전략 보기 <span class="alt-note">· 자료 도착 후 추가 예정</span></summary>
+          <div class="alt-builds-grid">
+            <article class="card card-compare">
+              <header class="compare-head">
+                <span class="badge badge-blue">대안 A</span>
+                <h3>가성비 흑수저 세팅</h3>
+              </header>
+              <p class="card-desc">잠재 사행성 배제, 확정 스탯 위주. 상세 라인은 docx 도착 후.</p>
+              <ul class="bullets">
+                <li class="warn">자료 정리 중</li>
+              </ul>
+            </article>
+
+            <article class="card card-compare">
+              <header class="compare-head">
+                <span class="badge badge-blue">대안 B</span>
+                <h3>잠재 기반 계단식 템트리</h3>
+              </header>
+              <p class="card-desc">레벨별 무기 교체와 큐브 잠재 강화. 상세는 docx 도착 후.</p>
+              <ul class="bullets">
+                <li class="warn">자료 정리 중</li>
+              </ul>
+            </article>
+          </div>
+        </details>
+
+        <article class="card card-table-wrap">
+          <header class="card-head">
+            <h3 class="card-title">레벨 구간별 장비 세팅</h3>
+            <p class="card-desc">docx 자료 도착 시 슬롯별 교체 시점을 표로 정리합니다.</p>
+          </header>
+          <div class="table-scroll">
+            <table class="stat-table">
+              <thead>
+                <tr>
+                  <th>레벨</th>
+                  <th>무기</th>
+                  <th>모자</th>
+                  <th>방어구</th>
+                  <th>장신구</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Lv. 8 ~ 30</td><td colspan="4" class="placeholder-cell">자료 정리 중</td></tr>
+                <tr><td>Lv. 30 ~ 50</td><td colspan="4" class="placeholder-cell">자료 정리 중</td></tr>
+                <tr><td>Lv. 50 ~ 70</td><td colspan="4" class="placeholder-cell">자료 정리 중</td></tr>
+                <tr><td>Lv. 70 ~ 100</td><td colspan="4" class="placeholder-cell">자료 정리 중</td></tr>
+                <tr><td>Lv. 100 ~</td><td colspan="4" class="placeholder-cell">자료 정리 중</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <footer class="sources">
+          <h4>참고 자료</h4>
+          <ul>
+            <li><span class="src-pending">— docx 자료 도착 후 출처 정리 예정 —</span></li>
+            <li><a href="https://maple.inven.co.kr/dataninfo/item/" target="_blank" rel="noopener">메이플 인벤 — 아이템 데이터베이스</a></li>
+          </ul>
+        </footer>
+      </div>
+    </section>
+
+    <!-- ====================== SKILL TREE ====================== -->
+    <section id="skill" class="section section-tinted">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-eyebrow">03 · SKILL TREE</span>
+          <h2 class="section-title">차수별 최적 스킬트리</h2>
+          <p class="section-desc">
+            1차(매지션) → 2차(위자드, 아이스/라이트닝) → 3차(메이지) → 4차(아크메이지)
+            순서. 각 차수의 세부 분배 수치는 docx 자료 도착 후 채울 예정입니다.
+          </p>
+        </header>
+
+        <div class="tabs" role="tablist" aria-label="차수 선택">
+          <button class="tab is-active" role="tab" aria-selected="true" data-tab="job1">1차 · 매지션 <span class="tab-sub">8~30</span></button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="job2">2차 · 위자드 <span class="tab-sub">30~70</span></button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="job3">3차 · 메이지 <span class="tab-sub">70~120</span></button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="job4">4차 · 아크메이지 <span class="tab-sub">120~</span></button>
+        </div>
+
+        <!-- 1차 -->
+        <div class="tab-panel is-active" id="job1" role="tabpanel">
+          <div class="card-grid">
+            <article class="card card-highlight card-highlight-cold">
+              <div class="card-tag tag-cold">★ 정석 빌드 (예정)</div>
+              <h3 class="card-title">매지션 1차 — 자료 정리 중</h3>
+              <p class="card-desc">매직 클로 · MP 이터 · 매직 가드 · 에너지 볼트 분배 권장. 세부 포인트는 docx 도착 후.</p>
+              <ol class="ordered-skill">
+                <li><span>1.</span> 매직 클로 — 주력 단일기</li>
+                <li><span>2.</span> MP 이터 — MP 회복</li>
+                <li><span>3.</span> 매직 가드 — 피격 데미지를 MP로 흡수</li>
+                <li><span>4.</span> 에너지 볼트 — 보조</li>
+                <li><span>5.</span> 자료 도착 후 세부 수치 채울 예정</li>
+              </ol>
+            </article>
+          </div>
+
+          <footer class="sources">
+            <h4>참고 자료</h4>
+            <ul>
+              <li><span class="src-pending">— docx 자료 도착 후 출처 정리 예정 —</span></li>
+            </ul>
+          </footer>
+        </div>
+
+        <!-- 2차 -->
+        <div class="tab-panel" id="job2" role="tabpanel" hidden>
+          <div class="card-grid">
+            <article class="card card-highlight card-highlight-cold">
+              <div class="card-tag tag-cold">★ 정석 빌드 (예정)</div>
+              <h3 class="card-title">위자드 (아이스/라이트닝) 2차 — 자료 정리 중</h3>
+              <p class="card-desc">콜드빔과 썬더볼트 중 어느 스킬을 선마할지, 부스터·텔레포트 배치는 docx 도착 후.</p>
+              <ol class="ordered-skill">
+                <li><span>1.</span> 콜드빔 — 단일 빙결 주력기</li>
+                <li><span>2.</span> 썬더볼트 — 광역 라이트닝</li>
+                <li><span>3.</span> 매직 부스터 — 공격 속도</li>
+                <li><span>4.</span> 텔레포트 — 기동성</li>
+                <li><span>5.</span> 자료 도착 후 세부 수치 채울 예정</li>
+              </ol>
+            </article>
+          </div>
+
+          <details class="alt-builds">
+            <summary>다른 2차 빌드 보기 <span class="alt-note">· 콜드빔 vs 썬더볼트 우선 마스터</span></summary>
+            <div class="alt-builds-grid">
+              <article class="card">
+                <div class="card-tag tag-soft">대안 빌드</div>
+                <h3 class="card-title">자료 정리 중</h3>
+                <ul class="bullets">
+                  <li>docx 도착 후 본문 채울 예정</li>
+                </ul>
+              </article>
+            </div>
+          </details>
+
+          <footer class="sources">
+            <h4>참고 자료</h4>
+            <ul>
+              <li><span class="src-pending">— docx 자료 도착 후 출처 정리 예정 —</span></li>
+            </ul>
+          </footer>
+        </div>
+
+        <!-- 3차 -->
+        <div class="tab-panel" id="job3" role="tabpanel" hidden>
+          <div class="card-grid">
+            <article class="card card-highlight card-highlight-cold">
+              <div class="card-tag tag-cold">★ 핵심 우선순위 (예정)</div>
+              <h3 class="card-title">메이지 (아이스/라이트닝) 3차 — 자료 정리 중</h3>
+              <p class="card-desc">아이스 스트레인 · 체인 라이트닝 · 슬로우 · 파셜 디스플레이 분배 권장. 세부는 docx 도착 후.</p>
+              <ol class="ordered-skill">
+                <li><span>1</span> 아이스 스트레인 — 광역 빙결</li>
+                <li><span>2</span> 체인 라이트닝 — 다중 타깃 광역</li>
+                <li><span>3</span> 슬로우 — 무빙 보조</li>
+                <li><span>4</span> 자료 도착 후 세부 수치 채울 예정</li>
+              </ol>
+            </article>
+          </div>
+
+          <footer class="sources">
+            <h4>참고 자료</h4>
+            <ul>
+              <li><span class="src-pending">— docx 자료 도착 후 출처 정리 예정 —</span></li>
+            </ul>
+          </footer>
+        </div>
+
+        <!-- 4차 -->
+        <div class="tab-panel" id="job4" role="tabpanel" hidden>
+          <div class="card-grid">
+            <article class="card card-highlight card-highlight-cold">
+              <div class="card-tag tag-cold">★ 최우선 마스터 (예정)</div>
+              <h3 class="card-title">아크메이지 (썬콜) 4차 — 자료 정리 중</h3>
+              <p class="card-desc">블리자드 · 익스플로전 · 마나 리플렉션 · 메이플 영웅 — 세부 분배는 docx 도착 후.</p>
+              <ol class="ordered-skill">
+                <li><span>1</span> 블리자드 — 광역 빙결 최종기</li>
+                <li><span>2</span> 마나 리플렉션 — 마법 피해 반사</li>
+                <li><span>3</span> 메이플 영웅 — 파티 버프</li>
+                <li><span>4</span> 자료 도착 후 세부 수치 채울 예정</li>
+              </ol>
+            </article>
+          </div>
+
+          <details class="alt-builds">
+            <summary>4차 추가 스킬 (스킬북 파밍) 보기</summary>
+            <div class="alt-builds-grid">
+              <article class="card">
+                <div class="card-tag tag-soft">스킬북 파밍</div>
+                <h3 class="card-title">자료 정리 중</h3>
+                <ul class="bullets">
+                  <li>docx 도착 후 스킬북 대상 채울 예정</li>
+                </ul>
+              </article>
+            </div>
+          </details>
+
+          <footer class="sources">
+            <h4>참고 자료</h4>
+            <ul>
+              <li><span class="src-pending">— docx 자료 도착 후 출처 정리 예정 —</span></li>
+            </ul>
+          </footer>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== ROUTE ====================== -->
+    <section id="route" class="section">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-eyebrow">04 · ROUTE</span>
+          <h2 class="section-title">레벨링 동선 & 사냥터</h2>
+          <p class="section-desc">
+            플래닛의 경험치·메소 배율과 개인화 필드(☆)를 살린 동선입니다.
+            구체적인 사냥터와 동선은 docx 자료 도착 후 채워집니다.
+          </p>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline-item">
+            <span class="timeline-marker">8 ~ 30</span>
+            <article class="card timeline-card">
+              <h3 class="card-title">매지션 — 자료 정리 중</h3>
+              <ul class="route-list">
+                <li><span class="route-key">사냥터</span><span class="route-val placeholder-cell">— docx 도착 후 채울 영역 —</span></li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="timeline-item">
+            <span class="timeline-marker">30 ~ 50</span>
+            <article class="card timeline-card">
+              <h3 class="card-title">위자드 초반 — 자료 정리 중</h3>
+              <ul class="route-list">
+                <li><span class="route-key">사냥터</span><span class="route-val placeholder-cell">— docx 도착 후 채울 영역 —</span></li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="timeline-item">
+            <span class="timeline-marker">50 ~ 70</span>
+            <article class="card timeline-card">
+              <h3 class="card-title">위자드 후반 — 자료 정리 중</h3>
+              <ul class="route-list">
+                <li><span class="route-key">사냥터</span><span class="route-val placeholder-cell">— docx 도착 후 채울 영역 —</span></li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="timeline-item">
+            <span class="timeline-marker timeline-marker-cold">70 ~ 100+ · 메이지 전성기</span>
+            <article class="card timeline-card card-highlight card-highlight-cold">
+              <div class="card-tag tag-cold">3차 전직 · 메이지</div>
+              <h3 class="card-title">광역 빙결 사냥터 — 자료 정리 중</h3>
+              <p class="card-desc">체인 라이트닝 + 아이스 스트레인 시너지 사냥터는 docx 자료 도착 후 채워집니다.</p>
+              <ul class="route-list">
+                <li><span class="route-key">사냥터</span><span class="route-val placeholder-cell">— docx 도착 후 채울 영역 —</span></li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="timeline-item">
+            <span class="timeline-marker">100 ~ · 예정</span>
+            <article class="card timeline-card">
+              <div class="card-tag tag-soft">4차 전직 · 아크메이지</div>
+              <h3 class="card-title">블리자드 사냥터 — 자료 정리 중</h3>
+              <ul class="route-list">
+                <li><span class="route-key">사냥터</span><span class="route-val placeholder-cell">— docx 도착 후 채울 영역 —</span></li>
+              </ul>
+            </article>
+          </li>
+        </ol>
+
+        <article class="card tip-card">
+          <h3 class="card-title">동선 운영 핵심 팁</h3>
+          <ul class="bullets">
+            <li class="warn">docx 자료 도착 후 본문 채울 예정</li>
+          </ul>
+        </article>
+
+        <footer class="sources">
+          <h4>참고 자료</h4>
+          <ul>
+            <li><span class="src-pending">— docx 자료 도착 후 출처 정리 예정 —</span></li>
+            <li><a href="https://namu.wiki/w/%EB%A9%94%EC%9D%B4%ED%94%8C%20%ED%94%8C%EB%9E%98%EB%8B%9B/%EC%82%AC%EB%83%A5%ED%84%B0" target="_blank" rel="noopener">메이플 플래닛 / 사냥터 — 나무위키 (공통 사냥터 참고)</a></li>
+          </ul>
+        </footer>
+      </div>
+    </section>
+
+    <!-- ====================== COMMUNITY ====================== -->
+    <section id="community" class="section section-tinted">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-eyebrow">05 · COMMUNITY</span>
+          <h2 class="section-title">커뮤니티 & 참고 자료</h2>
+          <p class="section-desc">
+            본 가이드 작성에 참고할 위키, 공식 페이지, 영상 자료를 모을 영역입니다.
+            구체적인 출처는 docx 자료 도착 후 채워집니다.
+          </p>
+        </header>
+
+        <div class="ref-grid">
+          <article class="card ref-card">
+            <span class="ref-tag">위키</span>
+            <h3>나무위키 · 데이터</h3>
+            <ul class="ref-list">
+              <li><a href="https://namu.wiki/w/%EB%A9%94%EC%9D%B4%ED%94%8C%20%ED%94%8C%EB%9E%98%EB%8B%9B" target="_blank" rel="noopener">메이플 플래닛 본문</a></li>
+              <li><span class="src-pending">— 썬콜 / 아크메이지 namuwiki 링크: docx 도착 후 채움 —</span></li>
+            </ul>
+          </article>
+
+          <article class="card ref-card">
+            <span class="ref-tag">공식</span>
+            <h3>공식 페이지</h3>
+            <ul class="ref-list">
+              <li><a href="https://maplestoryworlds.nexon.com/ko/play/64b9fefe2f664c189a4c1be40b6e8062/" target="_blank" rel="noopener">메이플 플래닛 — 메이플스토리 월드</a></li>
+            </ul>
+          </article>
+
+          <article class="card ref-card">
+            <span class="ref-tag">시스템 영상</span>
+            <h3>메이플 플래닛 영상</h3>
+            <ul class="ref-list">
+              <li><a href="https://www.youtube.com/watch?v=Fc4ZgDz6bIk" target="_blank" rel="noopener">메이플 플래닛 썬콜 육성 공략</a></li>
+              <li><a href="https://www.youtube.com/watch?v=m_Rwa_W33Es" target="_blank" rel="noopener">메이플 플래닛 무자본 썬콜 육성</a></li>
+              <li><span class="src-pending">— docx 도착 후 추가 영상 출처 채움 —</span></li>
+            </ul>
+          </article>
+
+          <article class="card ref-card">
+            <span class="ref-tag">데이터</span>
+            <h3>아이템 / 스킬 아이콘</h3>
+            <ul class="ref-list">
+              <li><a href="https://maple.inven.co.kr/dataninfo/item/" target="_blank" rel="noopener">메이플 인벤 — 아이템 데이터베이스</a></li>
+              <li><a href="https://maple.inven.co.kr/dataninfo/character/" target="_blank" rel="noopener">메이플 인벤 — 스킬 데이터베이스</a></li>
+            </ul>
+            <p class="ref-note">
+              본문에 들어갈 모든 장비·스킬 아이콘은 메이플 인벤 데이터베이스에서
+              가져올 예정이며 © Nexon에 귀속됩니다.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="24" height="24">
+            <rect width="32" height="32" rx="9" fill="#3182F6" />
+            <path
+              d="M16 4 L18.6 12 L26.6 12 L20 17 L22.6 25 L16 20 L9.4 25 L12 17 L5.4 12 L13.4 12 Z"
+              fill="#FFFFFF"
+            />
+          </svg>
+        </span>
+        <div>
+          <p class="footer-name">썬콜 노트</p>
+          <p class="footer-sub">메이플 플래닛 아이스/라이트닝 아크메이지 가이드</p>
+        </div>
+      </div>
+
+      <p class="footer-disc">
+        본 페이지는 비공식 팬 가이드 스켈레톤입니다. 본문은 docx 자료 도착 후
+        채워질 예정이며, 모든 정보는 커뮤니티 자료와 위키를 정리한 것으로 실제
+        인게임 사양과 다를 수 있습니다.
+      </p>
+
+      <p class="footer-meta">
+        <span>최종 업데이트 2026 · 05 · 28</span>
+        <span class="dot-sep">·</span>
+        <span>썬콜 자료 준비 중</span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>

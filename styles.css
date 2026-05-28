@@ -1263,6 +1263,148 @@ img, svg { display: block; }
 }
 
 /* ============================================
+   Cold theme variants (suncol page)
+   ============================================ */
+.theme-cold .hero {
+  background:
+    radial-gradient(720px 480px at 92% 8%, rgba(49, 130, 246, 0.22), rgba(49, 130, 246, 0) 70%),
+    radial-gradient(560px 360px at 6% 100%, rgba(255, 184, 0, 0.10), rgba(255, 184, 0, 0) 70%),
+    linear-gradient(180deg, #FFFFFF 0%, #F7F8FA 100%);
+}
+
+.eyebrow-cold {
+  color: var(--blue);
+  background: var(--blue-soft);
+  border-color: rgba(49, 130, 246, 0.22);
+}
+.eyebrow-cold .dot { background: var(--blue); }
+
+.grad-text-cold {
+  background: linear-gradient(120deg, #3182F6 0%, #1B64DA 60%, #6FA8FF 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+
+.btn-cold {
+  background: var(--text-strong);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-sm);
+}
+.btn-cold:hover {
+  background: var(--blue-strong);
+}
+
+.hero-card-cold .badge-yellow,
+.theme-cold .badge-yellow {
+  background: var(--blue-soft);
+  color: var(--blue-strong);
+}
+
+.card-highlight-cold {
+  background: linear-gradient(180deg, rgba(232, 242, 254, 0.50), rgba(232, 242, 254, 0.18) 60%, #FFFFFF 100%);
+  border-color: rgba(49, 130, 246, 0.30);
+}
+
+.tag-cold {
+  background: var(--blue);
+  color: #FFFFFF;
+}
+
+.hl-steps-cold .hl-num {
+  background: var(--blue);
+}
+
+.character-profile-cold {
+  background: linear-gradient(135deg, var(--blue-soft), #FFFFFF 75%);
+  border-color: rgba(49, 130, 246, 0.22);
+}
+.character-profile-cold .character-portrait {
+  background:
+    radial-gradient(80px 60px at 30% 20%, rgba(255,255,255,0.7), transparent 70%),
+    linear-gradient(135deg, var(--blue-soft), var(--blue) 200%);
+  border-color: rgba(49, 130, 246, 0.30);
+}
+.character-tag-cold {
+  background: var(--blue);
+  color: #FFFFFF;
+}
+
+.timeline-marker-cold {
+  background: linear-gradient(135deg, #3182F6, #1B64DA) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 6px 18px rgba(49, 130, 246, 0.28);
+}
+
+/* Placeholder cell in tables */
+.placeholder-cell {
+  color: var(--text-mute);
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+/* Source pending marker */
+.src-pending {
+  color: var(--text-mute);
+  font-size: 13px;
+  font-style: italic;
+  letter-spacing: -0.01em;
+}
+
+/* ============================================
+   Class switcher (header)
+   ============================================ */
+.class-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  background: var(--surface-soft);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-pill);
+  flex-shrink: 0;
+}
+
+.cs-link {
+  display: inline-flex;
+  align-items: center;
+  height: 28px;
+  padding: 0 14px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text-soft);
+  border-radius: var(--radius-pill);
+  transition: color 140ms var(--ease), background-color 140ms var(--ease);
+  white-space: nowrap;
+}
+.cs-link:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.6);
+}
+.cs-link.is-active {
+  background: var(--text-strong);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-xs);
+}
+.cs-link.is-active:hover { background: var(--text-strong); }
+
+/* On suncol page, active link uses blue tint to differentiate visually */
+.class-switcher[data-theme="cold"] .cs-link.is-active {
+  background: var(--blue);
+}
+
+@media (max-width: 540px) {
+  .class-switcher { padding: 2px; }
+  .cs-link { height: 26px; padding: 0 11px; font-size: 11px; }
+}
+
+@media (max-width: 380px) {
+  .cs-link { padding: 0 9px; }
+}
+
+/* ============================================
    Character profile (hero card top)
    ============================================ */
 .character-profile {
