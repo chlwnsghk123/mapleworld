@@ -3,7 +3,7 @@
   "trailingSlash": false,
   "headers": [
     {
-      "source": "/(.*)\\.(svg|webmanifest|css|js)",
+      "source": "/(.*)\\.(svg|webmanifest|css|js|png|jpg|jpeg|webp)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=3600, must-revalidate" }
       ]
