@@ -1,1 +1,855 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFB800" />
 
+  <title>표도 노트 · 메이플 플래닛 표창도적 육성 가이드</title>
+  <meta name="description" content="메이플 플래닛 표창도적(나이트로드) 정석 육성 가이드. 차수별 스킬트리, LUK/DEX 스탯 분배, 레벨별 템트리, 사냥터 동선까지 한 페이지에." />
+
+  <meta property="og:title" content="표도 노트 · 메이플 플래닛 표창도적 육성 가이드" />
+  <meta property="og:description" content="차수별 스킬트리부터 사냥터 동선까지, 표창도적 정석 육성을 한 페이지에." />
+  <meta property="og:image" content="/og-image.svg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ko_KR" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="표도 노트 · 메이플 플래닛 표창도적 육성 가이드" />
+  <meta name="twitter:description" content="차수별 스킬트리부터 사냥터 동선까지, 표창도적 정석 육성을 한 페이지에." />
+  <meta name="twitter:image" content="/og-image.svg" />
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/icon.svg" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link
+    rel="stylesheet"
+    as="style"
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css"
+  />
+
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">본문 바로가기</a>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="표도 노트 홈">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="28" height="28">
+            <defs>
+              <linearGradient id="brandGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#FFB800" />
+                <stop offset="100%" stop-color="#FF8A00" />
+              </linearGradient>
+            </defs>
+            <rect width="32" height="32" rx="9" fill="url(#brandGrad)" />
+            <path
+              d="M16 5 L18.2 12.4 L25.8 11.4 L20.2 16 L25.8 20.6 L18.2 19.6 L16 27 L13.8 19.6 L6.2 20.6 L11.8 16 L6.2 11.4 L13.8 12.4 Z"
+              fill="#FFFFFF"
+            />
+            <circle cx="16" cy="16" r="2.4" fill="#FFB800" />
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">표도 노트</span>
+          <span class="brand-sub">메이플 플래닛 표창도적 가이드</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="섹션 이동">
+        <a href="#stat">스탯</a>
+        <a href="#gear">템트리</a>
+        <a href="#skill">스킬트리</a>
+        <a href="#route">레벨링</a>
+        <a href="#community">참고 자료</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ====================== HERO ====================== -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <span class="eyebrow">
+            <span class="dot"></span>
+            MAPLE PLANET · 표창도적 육성 가이드
+          </span>
+          <h1 class="hero-title">
+            표창 한 발에<br />
+            <span class="grad-text">정석</span>으로 성장하기
+          </h1>
+          <p class="hero-desc">
+            메이플 플래닛에서 표창도적(나이트로드)을 키울 때 필요한 모든
+            정보를 한 페이지에 모았습니다. 정석 / 올럭 / 하이브리드 스탯
+            비교부터 메바 스킵 템트리, 차수별 스킬트리, 사헬지대 · 망용둥까지
+            이어지는 사냥터 동선 — 깔끔하게.
+          </p>
+
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#stat">가이드 시작하기</a>
+            <a class="btn btn-ghost" href="#community">참고 자료 보기</a>
+          </div>
+
+          <dl class="hero-meta">
+            <div>
+              <dt>마지막 업데이트</dt>
+              <dd>2026 · 05 · 28</dd>
+            </div>
+            <div>
+              <dt>정리된 자료</dt>
+              <dd>14건</dd>
+            </div>
+            <div>
+              <dt>대상 직업</dt>
+              <dd>표창도적 (나이트로드)</dd>
+            </div>
+          </dl>
+        </div>
+
+        <aside class="hero-card" aria-label="가이드 요약">
+          <header class="hero-card-head">
+            <span class="badge badge-yellow">SUMMARY</span>
+            <h2>한눈에 보는 표창도적</h2>
+          </header>
+          <ul class="hero-card-list">
+            <li>
+              <span class="hcl-key">주 스탯</span>
+              <span class="hcl-val">LUK <em>(올럭 → 120 이후 정석 스위칭)</em></span>
+            </li>
+            <li>
+              <span class="hcl-key">강점</span>
+              <span class="hcl-val">맥뎀 999,999 · 헤이스트 기동성</span>
+            </li>
+            <li>
+              <span class="hcl-key">약점</span>
+              <span class="hcl-val">초반 부스탯 결핍 · 표창 소모</span>
+            </li>
+            <li>
+              <span class="hcl-key">코어 아이템</span>
+              <span class="hcl-val">자쿰의 투구 · 메바(20제) · 캐스터스</span>
+            </li>
+            <li>
+              <span class="hcl-key">핵심 스킬</span>
+              <span class="hcl-val">럭키 세븐 · 크리티컬 스로우 · 드레인</span>
+            </li>
+          </ul>
+          <footer class="hero-card-foot">
+            상세 수치와 근거는 각 섹션에서 확인하세요.
+          </footer>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ====================== STAT ====================== -->
+    <section id="stat" class="section section-tinted">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-eyebrow">01 · STAT</span>
+          <h2 class="section-title">LUK · DEX 스탯 분배</h2>
+          <p class="section-desc">
+            럭키 세븐은 무기 마스터리·DEX의 영향을 전혀 받지 않고
+            <strong>LUK 총량과 무기 표기 공격력</strong>만으로 데미지가
+            결정됩니다. 그래서 스탯 분배가 표창도적 사냥 속도의 분기점입니다.
+          </p>
+        </header>
+
+        <div class="compare-grid">
+          <article class="card card-compare">
+            <header class="compare-head">
+              <span class="badge badge-blue">대안 A</span>
+              <h3>정석 스탯 분배</h3>
+            </header>
+            <p class="card-desc">
+              본인 레벨에 맞는 상위 무기·방어구의 착용 제한을 맞추기 위해
+              45레벨 구간부터 DEX에 분산 투자하는 전통적인 방식.
+            </p>
+            <div class="pros-cons">
+              <div>
+                <h4>장점</h4>
+                <ul>
+                  <li>동레벨 장비 자연스럽게 착용</li>
+                  <li>방어력 확보로 접촉 데미지 생존율 ↑</li>
+                </ul>
+              </div>
+              <div>
+                <h4>단점</h4>
+                <ul>
+                  <li>주스탯 LUK이 동레벨 대비 현저히 낮음</li>
+                  <li>20~50 구간 방수 증가 · 포션 낭비</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card-compare">
+            <header class="compare-head">
+              <span class="badge badge-blue">대안 B</span>
+              <h3>올럭 스탯 분배</h3>
+            </header>
+            <p class="card-desc">
+              모든 스탯 포인트를 LUK에 몰빵하고 DEX는 0으로 유지. 초보자 방어구와
+              저레벨 무기로 버티며 화력 집중형으로 키우는 극단적 빌드.
+            </p>
+            <div class="pros-cons">
+              <div>
+                <h4>장점</h4>
+                <ul>
+                  <li>초중반 럭키 세븐 데미지 폭발</li>
+                  <li>몬스터 확정 킬 구간이 넓어짐</li>
+                </ul>
+              </div>
+              <div>
+                <h4>단점</h4>
+                <ul>
+                  <li>고레벨 아대 착용에 외부 DEX 의존</li>
+                  <li>장비 세팅 메소 부담 수직 상승</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card-compare">
+            <header class="compare-head">
+              <span class="badge badge-blue">대안 C</span>
+              <h3>하이브리드 (Low-DEX)</h3>
+            </header>
+            <p class="card-desc">
+              극초반 올럭으로 사냥 효율을 뽑다가, 100레벨 이후 캐스터스·크리븐
+              착용 시점에 AP 되돌리기로 정석으로 전환하는 방식.
+            </p>
+            <div class="pros-cons">
+              <div>
+                <h4>장점</h4>
+                <ul>
+                  <li>초반 효율 + 후반 무기 깡공 모두 챙김</li>
+                  <li>잠재 시스템 인플레이션과 시너지</li>
+                </ul>
+              </div>
+              <div>
+                <h4>단점</h4>
+                <ul>
+                  <li>AP 초기화 비용 발생</li>
+                  <li>전환 시점 계산 필요</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card-compare card-highlight">
+            <header class="compare-head">
+              <span class="badge badge-yellow">★ 가장 추천</span>
+              <h3>초중반 올럭 → 120 이후 정석 스위칭</h3>
+            </header>
+            <p class="card-desc">
+              플래닛은 잡옵션 잠재가 등장하지 않고 LUK%/DEX% 유효 옵션을 확보하기
+              상대적으로 쉬워, 외부 DEX 수급 난이도가 낮습니다. 그래서 올럭의
+              약점이 크게 줄어듭니다.
+            </p>
+            <div class="hl-steps">
+              <div class="hl-step">
+                <span class="hl-num">1</span>
+                <p><strong>1 ~ 50</strong> · LUK에 모든 스탯 투자, DEX 0 유지</p>
+              </div>
+              <div class="hl-step">
+                <span class="hl-num">2</span>
+                <p><strong>50</strong> · 자쿰 누클 파티(약 900만 메소)로 <strong>자쿰의 투구(+전스탯 15)</strong> 확보</p>
+              </div>
+              <div class="hl-step">
+                <span class="hl-num">3</span>
+                <p><strong>50 ~ 120</strong> · 그린 하프 슈즈 + 슈피겔만 목걸이로 외부 DEX 18+ 확보, 올럭 유지</p>
+              </div>
+              <div class="hl-step">
+                <span class="hl-num">4</span>
+                <p><strong>120 ~</strong> · 캐스터스/크리븐 교체 시점에 정석 스탯으로 자연스럽게 전환</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <article class="card card-table-wrap">
+          <header class="card-head">
+            <h3 class="card-title">스탯 분배 비교</h3>
+            <p class="card-desc">각 대안의 핵심 지표를 한 표로 비교합니다.</p>
+          </header>
+          <div class="table-scroll">
+            <table class="stat-table">
+              <thead>
+                <tr>
+                  <th>구분</th>
+                  <th>LUK 투자</th>
+                  <th>DEX 투자</th>
+                  <th>초반 효율</th>
+                  <th>후반 효율</th>
+                  <th>메소 부담</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>정석</td><td>레벨업 시 일부</td><td>장비 요구치만큼 분산</td><td>낮음</td><td>안정적</td><td>낮음</td></tr>
+                <tr><td>올럭</td><td>전량</td><td>0 (외부 의존)</td><td>매우 높음</td><td>외부 DEX 의존</td><td>높음</td></tr>
+                <tr><td>하이브리드</td><td>초반 전량</td><td>전환 시점부터</td><td>높음</td><td>높음</td><td>중간</td></tr>
+                <tr><td><strong>추천</strong></td><td><strong>120까지 전량</strong></td><td><strong>외부 + 120 이후 정석</strong></td><td><strong>매우 높음</strong></td><td><strong>매우 높음</strong></td><td><strong>중간</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <footer class="sources">
+          <h4>참고 자료</h4>
+          <ul>
+            <li><a href="https://namu.wiki/w/%EB%A9%94%EC%9D%B4%ED%94%8C%20%ED%94%8C%EB%9E%98%EB%8B%9B/%EC%A7%81%EC%97%85/%EB%82%98%EC%9D%B4%ED%8A%B8%EB%A1%9C%EB%93%9C" target="_blank" rel="noopener">메이플 플래닛 / 직업 / 나이트로드 — 나무위키</a></li>
+            <li><a href="https://www.youtube.com/watch?v=r5ywMtXe3BQ" target="_blank" rel="noopener">Lv.1~Lv.50 올럭표도 가성비 템 세팅 [메이플랜드] — YouTube</a></li>
+            <li><a href="https://www.youtube.com/watch?v=zJ8KiltY1AM" target="_blank" rel="noopener">[메이플랜드] 무자본 표도 1~60렙 아이템, 스탯 찍는 방법 총정리 — YouTube</a></li>
+            <li><a href="https://www.youtube.com/watch?v=50M9a34AthQ" target="_blank" rel="noopener">[메이플랜드] 초보 도적을 위한 1~40 육성 &amp; 스킬트리 상세 가이드 — YouTube</a></li>
+            <li><a href="https://namu.wiki/w/%EB%A9%94%EC%9D%B4%ED%94%8C%20%ED%94%8C%EB%9E%98%EB%8B%9B" target="_blank" rel="noopener">메이플 플래닛 — 나무위키 (잠재 시스템 / 큐브)</a></li>
+          </ul>
+        </footer>
+      </div>
+    </section>
+
+    <!-- ====================== GEAR ====================== -->
+    <section id="gear" class="section">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-eyebrow">02 · GEAR</span>
+          <h2 class="section-title">레벨 구간별 추천 템트리</h2>
+          <p class="section-desc">
+            아대 · 표창 · 방어구 · 장신구를 레벨별로 정리합니다. 결론부터 말하면
+            <strong>메바 스킵 전략</strong> — 20제 떡작 메바로 100레벨까지 버티고
+            캐스터스/크리븐으로 직행 — 이 자본 효율 1위입니다.
+          </p>
+        </header>
+
+        <div class="compare-grid">
+          <article class="card card-compare">
+            <header class="compare-head">
+              <span class="badge badge-blue">대안 A</span>
+              <h3>가성비 흑수저 세팅</h3>
+            </header>
+            <p class="card-desc">
+              잠재능력 사행성 요소를 배제하고 확정 스탯 아이템만으로 무장. 총
+              비용 약 1,500만 메소 내외로 사냥/퀘스트만으로 수급 가능합니다.
+            </p>
+            <ul class="bullets">
+              <li><strong>전신갑옷</strong> · 툴카스 NPC 민첩 100% 주문서 10장 떡작 (약 35만 메소)</li>
+              <li><strong>신발</strong> · 블랙 아이젠 매물 약 220만 메소 또는 그린 하프 슈즈(41제, DEX +2)</li>
+              <li><strong>아대</strong> · 메바 20제 떡작 (공격력 23)</li>
+              <li><strong>모자</strong> · 자쿰의 투구 약 900만 메소 (누클 파티)</li>
+              <li><strong>장신구</strong> · 슈피겔만의 목걸이 약 30만 메소 (몬카 보상)</li>
+              <li><strong>장갑</strong> · 공격력 10+ 노가다 목장갑 (약 300만 메소)</li>
+            </ul>
+          </article>
+
+          <article class="card card-compare">
+            <header class="compare-head">
+              <span class="badge badge-blue">대안 B</span>
+              <h3>잠재 기반 계단식 템트리</h3>
+            </header>
+            <p class="card-desc">
+              미확인 아이템을 감정 돋보기(4,000 메소)로 레어로 변환하고 레벨
+              구간마다 무기/방어구를 교체. 50→다크 슬레인, 60→슬레인, 70→기간틱.
+            </p>
+            <ul class="bullets">
+              <li>레벨업 구간마다 무기 교체로 부드러운 성장 곡선</li>
+              <li>수상한 큐브로 유니크 등급까지 잠재 강화 시도</li>
+              <li class="warn"><strong>리스크</strong> — 블랙 큐브 부재로 중간 단계 장비에 메소 소각 위험. 매몰비용 큼</li>
+            </ul>
+          </article>
+
+          <article class="card card-compare card-highlight">
+            <header class="compare-head">
+              <span class="badge badge-yellow">★ 가장 추천</span>
+              <h3>메바 스킵 + 확정 스탯 코어 집중</h3>
+            </header>
+            <p class="card-desc">
+              중간 티어 아대(다크 슬레인 등) 구매·잠재 비용을 거래 수수료와
+              감가상각으로 잃지 않고, <strong>20제 메바로 100레벨까지 버틴 뒤
+              곧바로 캐스터스/크리븐</strong>으로 점프하는 전략입니다.
+            </p>
+            <ul class="bullets">
+              <li><strong>아대</strong> · 20제 떡작 메바 (공격력 23) → 100+ 캐스터스/크리븐 직행</li>
+              <li><strong>모자</strong> · 50레벨 자쿰의 투구 (전스탯 +15)</li>
+              <li><strong>신발</strong> · 그린 하프 슈즈(41제) → 블랙 아이젠</li>
+              <li><strong>장신구</strong> · 슈피겔만의 목걸이 (전스탯 +1)</li>
+              <li><strong>표창</strong> · 수비 → 월비(40~) → 금비(60~)</li>
+              <li><strong>잠재</strong> · 감정 돋보기로 레어까지만, 큐브 소각 자제</li>
+            </ul>
+          </article>
+        </div>
+
+        <article class="card card-table-wrap">
+          <header class="card-head">
+            <h3 class="card-title">레벨 구간별 장비 세팅</h3>
+            <p class="card-desc">레벨이 오를 때 어떤 슬롯을 어디서 교체할지 한 표로.</p>
+          </header>
+          <div class="table-scroll">
+            <table class="stat-table">
+              <thead>
+                <tr>
+                  <th>레벨</th>
+                  <th>아대</th>
+                  <th>표창</th>
+                  <th>모자 · 장신구</th>
+                  <th>방어구</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Lv. 1 ~ 20</td>
+                  <td>초보자 단검류</td>
+                  <td>수비 표창 (상점)</td>
+                  <td>저레벨 모자 / 없음</td>
+                  <td>초보자 방어구</td>
+                </tr>
+                <tr>
+                  <td>Lv. 20 ~ 40</td>
+                  <td><strong>메바 떡작</strong> (공 23)</td>
+                  <td>수비 → 월비 전환</td>
+                  <td>저레벨 모자</td>
+                  <td>민첩 떡작 전신갑옷</td>
+                </tr>
+                <tr>
+                  <td>Lv. 40 ~ 50</td>
+                  <td>메바 유지</td>
+                  <td>월비 4~5통 (개당 6k~10k)</td>
+                  <td>그린 하프 슈즈(41제)</td>
+                  <td>민첩 떡작 전신갑옷</td>
+                </tr>
+                <tr>
+                  <td>Lv. 50 ~ 60</td>
+                  <td>메바 유지</td>
+                  <td>월비 유지</td>
+                  <td><strong>자쿰의 투구</strong> · 슈피겔만 목걸이</td>
+                  <td>전신갑옷 + 공노목</td>
+                </tr>
+                <tr>
+                  <td>Lv. 60 ~ 100</td>
+                  <td>메바 유지 (스킵)</td>
+                  <td>금비 7~11통</td>
+                  <td>자쿰 + 슈피겔만 유지</td>
+                  <td>블랙 아이젠 · 공노목</td>
+                </tr>
+                <tr>
+                  <td>Lv. 100 ~</td>
+                  <td><strong>캐스터스 / 크리븐</strong></td>
+                  <td>금비 유지 · 상위 표창</td>
+                  <td>자쿰 유지 + 잠재 강화</td>
+                  <td>잠재 LUK% 유효옵 유지</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <footer class="sources">
+          <h4>참고 자료</h4>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=63PejPxF9Eg" target="_blank" rel="noopener">[메이플랜드] 뉴비 표도 템셋팅 가이드 — YouTube</a></li>
+            <li><a href="https://www.youtube.com/watch?v=r5ywMtXe3BQ" target="_blank" rel="noopener">Lv.1~Lv.50 올럭표도 가성비 템 세팅 — YouTube</a></li>
+            <li><a href="https://www.youtube.com/watch?v=zJ8KiltY1AM" target="_blank" rel="noopener">[메이플랜드] 무자본 표도 1~60렙 정리 — YouTube</a></li>
+            <li><a href="https://www.youtube.com/shorts/odd7SjVNB9Q" target="_blank" rel="noopener">메이플플래닛 미확인 아이템 큐브 시스템 — YouTube Shorts</a></li>
+            <li><a href="https://namu.wiki/w/%EB%A9%94%EC%9D%B4%ED%94%8C%20%ED%94%8C%EB%9E%98%EB%8B%9B/%EC%A7%81%EC%97%85/%EB%82%98%EC%9D%B4%ED%8A%B8%EB%A1%9C%EB%93%9C" target="_blank" rel="noopener">메이플 플래닛 / 직업 / 나이트로드 — 나무위키</a></li>
+          </ul>
+        </footer>
+      </div>
+    </section>
+
+    <!-- ====================== SKILL TREE ====================== -->
+    <section id="skill" class="section section-tinted">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-eyebrow">03 · SKILL TREE</span>
+          <h2 class="section-title">차수별 최적 스킬트리</h2>
+          <p class="section-desc">
+            1차(로그)부터 4차(나이트로드)까지, 표창도적 입문자가 따라가야 할
+            스킬 순서를 정리합니다. 빅뱅 전 체계를 그대로 따르므로
+            <strong>럭키 세븐 / 크리티컬 스로우 / 헤이스트 / 드레인</strong>이
+            핵심 축입니다.
+          </p>
+        </header>
+
+        <div class="tabs" role="tablist" aria-label="차수 선택">
+          <button class="tab is-active" role="tab" aria-selected="true" data-tab="job1">1차 · 로그</button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="job2">2차 · 어쌔신</button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="job3">3차 · 허밋</button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="job4">4차 · 나이트로드</button>
+        </div>
+
+        <!-- 1차 -->
+        <div class="tab-panel is-active" id="job1" role="tabpanel">
+          <div class="card-grid">
+            <article class="card card-highlight">
+              <div class="card-tag">★ 정석 빌드</div>
+              <h3 class="card-title">럭키 세븐 중심 트리</h3>
+              <p class="card-desc">교과서적인 표창도적 1차 분배. MP 16 / 데미지 150% 2연타의 럭키 세븐을 주력으로.</p>
+              <ol class="ordered-skill">
+                <li><span>1.</span> 럭키 세븐 1</li>
+                <li><span>2.</span> 님블 바디 3</li>
+                <li><span>3.</span> 킨 아이즈 8 (마스터)</li>
+                <li><span>4.</span> 럭키 세븐 20 (마스터)</li>
+                <li><span>5.</span> 님블 바디 20 (마스터)</li>
+                <li><span>6.</span> 다크 사이트 10</li>
+                <li><span>7.</span> 남는 포인트 → 디스오더</li>
+              </ol>
+              <p class="card-note">
+                <strong>킨 아이즈</strong>는 투척 사정거리를 +200 늘려 피격
+                횟수를 크게 줄여줍니다. 다크 사이트는 이동속도 페널티가
+                있어 10만 투자해 위험 구역 횡단용으로 사용하세요.
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="card-tag tag-soft">대안 빌드</div>
+              <h3 class="card-title">퓨전 도적 트리 (사장)</h3>
+              <p class="card-desc">표창값이 비쌌던 빅뱅 전 시대에 더블 스탭을 활용했던 기형적 트리.</p>
+              <ul class="bullets">
+                <li>더블 스탭(단검, MP 14 / 140%×2)을 올리며 표창 절약</li>
+                <li>STR/DEX 분산으로 중반 이후 화력 급감</li>
+                <li class="warn"><strong>현재는 추천하지 않음</strong> — 메이플 플래닛 배율 환경에서는 사장된 빌드</li>
+              </ul>
+            </article>
+          </div>
+
+          <footer class="sources">
+            <h4>참고 자료</h4>
+            <ul>
+              <li><a href="https://namu.wiki/w/%EB%A9%94%EC%9D%B4%ED%94%8C%20%ED%94%8C%EB%9E%98%EB%8B%9B/%EC%A7%81%EC%97%85/%EB%82%98%EC%9D%B4%ED%8A%B8%EB%A1%9C%EB%93%9C" target="_blank" rel="noopener">메이플 플래닛 / 직업 / 나이트로드 — 나무위키</a></li>
+              <li><a href="https://www.youtube.com/watch?v=8rI_koizkt8" target="_blank" rel="noopener">표창 던지는 단검도적을 알아보자 [1~30Lv.] — YouTube</a></li>
+              <li><a href="https://www.youtube.com/watch?v=50M9a34AthQ" target="_blank" rel="noopener">[메이플랜드] 초보 도적 1~40 육성 &amp; 스킬트리 — YouTube</a></li>
+            </ul>
+          </footer>
+        </div>
+
+        <!-- 2차 -->
+        <div class="tab-panel" id="job2" role="tabpanel" hidden>
+          <div class="card-grid">
+            <article class="card card-highlight">
+              <div class="card-tag">★ 정석 빌드</div>
+              <h3 class="card-title">크리티컬 선마 + 헤이스트</h3>
+              <p class="card-desc">개인화 필드(☆) 솔플과 파티 사냥 모두 잡는 균형형. 크리티컬 → 헤이스트 → 드레인 순.</p>
+              <ol class="ordered-skill">
+                <li><span>1.</span> 자벨린 마스터리 3</li>
+                <li><span>2.</span> 크리티컬 스로우 30 (마스터)</li>
+                <li><span>3.</span> 자벨린 마스터리 5</li>
+                <li><span>4.</span> 자벨린 부스터 6</li>
+                <li><span>5.</span> 헤이스트 20 (마스터)</li>
+                <li><span>6.</span> 자벨린 마스터리 20 (마스터)</li>
+                <li><span>7.</span> 인듀어 3</li>
+                <li><span>8.</span> 드레인 30 (마스터)</li>
+                <li><span>9.</span> 남는 포인트 → 자벨린 부스터</li>
+              </ol>
+              <p class="card-note">
+                <strong>크리티컬 스로우</strong>는 50% 확률로 데미지 2배 →
+                확정 킬 방수가 극적으로 감소. <strong>드레인</strong>은 데미지의
+                45%를 흡혈하여 엘릭서 소모를 0에 수렴시킵니다.
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="card-tag tag-soft">대안 빌드</div>
+              <h3 class="card-title">선 헤이스트 트리</h3>
+              <p class="card-desc">이속/점프 +40/+20 파티 버프 헤이스트를 최우선 마스터.</p>
+              <ul class="bullets">
+                <li>파티 사냥에서 환영, 맵 이동 쾌적</li>
+                <li>개인화 솔플 효율은 다소 떨어짐</li>
+                <li>친목/파티 위주 플레이어에게 적합</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <div class="card-tag tag-soft">대안 빌드</div>
+              <h3 class="card-title">선 크리티컬 트리</h3>
+              <p class="card-desc">크리티컬 +50% / 데미지 +100%를 먼저 마스터해 기댓값을 극한까지.</p>
+              <ul class="bullets">
+                <li>개인화 사냥터(☆) 독식형 빌드</li>
+                <li>폭발적인 솔플 성장 곡선</li>
+                <li>맵 이동·파티 기여도는 후순위</li>
+              </ul>
+            </article>
+          </div>
+
+          <footer class="sources">
+            <h4>참고 자료</h4>
+            <ul>
+              <li><a href="https://namu.wiki/w/%EB%A9%94%EC%9D%B4%ED%94%8C%20%ED%94%8C%EB%9E%98%EB%8B%9B/%EC%A7%81%EC%97%85/%EB%82%98%EC%9D%B4%ED%8A%B8%EB%A1%9C%EB%93%9C" target="_blank" rel="noopener">메이플 플래닛 / 직업 / 나이트로드 — 나무위키</a></li>
+              <li><a href="https://namu.wiki/w/%EB%A9%94%EC%9D%B4%ED%94%8C%20%ED%94%8C%EB%9E%98%EB%8B%9B" target="_blank" rel="noopener">메이플 플래닛 — 나무위키 (헤이스트 가치)</a></li>
+            </ul>
+          </footer>
+        </div>
+
+        <!-- 3차 -->
+        <div class="tab-panel" id="job3" role="tabpanel" hidden>
+          <article class="card pending-card">
+            <div class="card-tag tag-soft">3차 · 허밋</div>
+            <h3 class="card-title">샤프 아이즈 · 어벤져 중심</h3>
+            <p class="card-desc">
+              본 가이드는 1·2차 분배에 분석을 집중했습니다. 3차 허밋 스킬트리의
+              세부 수치(샤프 아이즈, 어벤져, 알케미, 메소 익스플로전 등)는 아래
+              참고 자료를 직접 확인하는 것을 권장합니다.
+            </p>
+            <p class="research-note">3차 세부 분배는 추가 리서치 예정</p>
+            <footer class="sources" style="margin-top: 16px;">
+              <h4>참고 자료</h4>
+              <ul>
+                <li><a href="https://namu.wiki/w/%EB%A9%94%EC%9D%B4%ED%94%8C%20%ED%94%8C%EB%9E%98%EB%8B%9B/%EC%A7%81%EC%97%85/%EB%82%98%EC%9D%B4%ED%8A%B8%EB%A1%9C%EB%93%9C" target="_blank" rel="noopener">메이플 플래닛 / 직업 / 나이트로드 — 나무위키</a></li>
+              </ul>
+            </footer>
+          </article>
+        </div>
+
+        <!-- 4차 -->
+        <div class="tab-panel" id="job4" role="tabpanel" hidden>
+          <article class="card pending-card">
+            <div class="card-tag tag-soft">4차 · 나이트로드</div>
+            <h3 class="card-title">트리플 스로우 중심 만렙 빌드</h3>
+            <p class="card-desc">
+              4차 트리플 스로우, 벤져, 닌자 앰부쉬 등의 세부 분배는 본 가이드의
+              핵심 분석 대상에 포함되지 않았습니다. 999,999 맥뎀 환경에서는
+              트리플 스로우 + 4차 패시브의 데미지 천장이 사실상 사라지므로 별도
+              리서치를 권장합니다.
+            </p>
+            <p class="research-note">4차 세부 분배는 추가 리서치 예정</p>
+            <footer class="sources" style="margin-top: 16px;">
+              <h4>참고 자료</h4>
+              <ul>
+                <li><a href="https://namu.wiki/w/%EB%A9%94%EC%9D%B4%ED%94%8C%20%ED%94%8C%EB%9E%98%EB%8B%9B/%EC%A7%81%EC%97%85/%EB%82%98%EC%9D%B4%ED%8A%B8%EB%A1%9C%EB%93%9C" target="_blank" rel="noopener">메이플 플래닛 / 직업 / 나이트로드 — 나무위키</a></li>
+              </ul>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== ROUTE ====================== -->
+    <section id="route" class="section">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-eyebrow">04 · ROUTE</span>
+          <h2 class="section-title">레벨링 동선 & 사냥터</h2>
+          <p class="section-desc">
+            플래닛의 경험치 3배 · 메소 2배 · 개인화 필드(☆) 시스템을 살린
+            <strong>하이브리드 동선</strong>입니다. 30레벨 차이 메소 페널티,
+            도적의 약한 체력을 지형 낚시 사냥으로 보완하는 것이 핵심.
+          </p>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline-item">
+            <span class="timeline-marker">10 ~ 20</span>
+            <article class="card timeline-card">
+              <h3 class="card-title">초보 직업 수련 퀘스트</h3>
+              <ul class="route-list">
+                <li><span class="route-key">사냥터</span><span class="route-val">— (퀘스트 중심)</span></li>
+                <li><span class="route-key">필수 퀘스트</span><span class="route-val">초보 직업 수련, 귀환 주문서 / 초보자 물약 보상</span></li>
+                <li><span class="route-key">팁</span><span class="route-val">3배 배율에서는 퀘스트 경험치가 사냥을 압도. 기초 자산 보존.</span></li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="timeline-item">
+            <span class="timeline-marker">20 ~ 25</span>
+            <article class="card timeline-card">
+              <h3 class="card-title">돼지의 해안가</h3>
+              <ul class="route-list">
+                <li><span class="route-key">사냥터</span><span class="route-val">돼지의 해안가</span></li>
+                <li><span class="route-key">팁</span><span class="route-val">파티 사냥 + 엇박자 타이밍으로 표창 소모 절약, 메소·포션 비축</span></li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="timeline-item">
+            <span class="timeline-marker">25 ~ 35</span>
+            <article class="card timeline-card card-highlight">
+              <h3 class="card-title">축축한나무숲습지 (좀비버섯)</h3>
+              <p class="card-desc">하이브리드 동선의 자본 조달처 — 후반 자쿰 투구·메바 떡작 비용을 여기서 마련.</p>
+              <ul class="route-list">
+                <li><span class="route-key">사냥터</span><span class="route-val">축축한나무숲습지 · 좀비버섯(Lv. 24)</span></li>
+                <li><span class="route-key">상주 한계</span><span class="route-val">~44레벨 (30레벨 차이 페널티 직전)</span></li>
+                <li><span class="route-key">파밍</span><span class="route-val">아다만티움 원석, 혼돈의 주문서, 수상한 큐브</span></li>
+                <li><span class="route-key">팁</span><span class="route-val">개미굴보다 맵 구조 단순, 도적이 사냥하기 수월</span></li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="timeline-item">
+            <span class="timeline-marker">35 ~ 45</span>
+            <article class="card timeline-card">
+              <h3 class="card-title">와일드보어의 땅 2</h3>
+              <ul class="route-list">
+                <li><span class="route-key">사냥터</span><span class="route-val">페리온 동쪽 바위길 3 → 비밀 포탈로 진입</span></li>
+                <li><span class="route-key">팁</span><span class="route-val">맵이 좁고 젠 속도가 빠름 → 위아래 2인 파티 시 경험치 폭발</span></li>
+                <li><span class="route-key">시너지</span><span class="route-val">헤이스트 기동성이 빛을 발하는 구간</span></li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="timeline-item">
+            <span class="timeline-marker">45 ~ 60</span>
+            <article class="card timeline-card">
+              <h3 class="card-title">사헬지대 ☆ → 치명적 오류 ☆ (C-1, C-2)</h3>
+              <ul class="route-list">
+                <li><span class="route-key">사냥터</span><span class="route-val">니할사막 · 개인화 필드(☆) 적용</span></li>
+                <li><span class="route-key">팁</span><span class="route-val">완벽한 1자형 평지 → 이동 점프 럭키 세븐 난사에 최적</span></li>
+                <li><span class="route-key">자리 경쟁</span><span class="route-val">0 (개인화 필드 ☆)</span></li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="timeline-item">
+            <span class="timeline-marker">60 ~ 75</span>
+            <article class="card timeline-card">
+              <h3 class="card-title">7층 8층 A구역 (CD)</h3>
+              <ul class="route-list">
+                <li><span class="route-key">사냥터</span><span class="route-val">7층 8층 A구역 (개인화 X)</span></li>
+                <li><span class="route-key">팁</span><span class="route-val">1층에만 몬스터 젠 → 럭키 세븐 타겟팅 분산이 적어 최고 성장 속도</span></li>
+                <li><span class="route-key">자리 없을 때</span><span class="route-val">무릉도원 빨코(빨간코 해적단 소굴 2/3) ☆로 선회 — 메소 파밍</span></li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="timeline-item">
+            <span class="timeline-marker">75 ~ 100+</span>
+            <article class="card timeline-card card-highlight">
+              <h3 class="card-title">뉴트 보호구역 ☆ (망용둥 / 위둥)</h3>
+              <p class="card-desc">표창도적 전성기. 알까기(낚시 사냥)로 약한 체력의 약점이 완전히 지워지는 구간.</p>
+              <ul class="route-list">
+                <li><span class="route-key">사냥터</span><span class="route-val">미나르숲 · 개인화 필드(☆)</span></li>
+                <li><span class="route-key">메커니즘</span><span class="route-val">특정 구조물에 올라 무피격 원거리 타격 — 알까기</span></li>
+                <li><span class="route-key">팁</span><span class="route-val">개인화 필드 독점 + 알까기 = 안정적 100+ 돌파</span></li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="timeline-item">
+            <span class="timeline-marker">100 ~</span>
+            <article class="card timeline-card">
+              <h3 class="card-title">부활하는 기억 ☆ → 망각의 길 2, 4</h3>
+              <ul class="route-list">
+                <li><span class="route-key">사냥터</span><span class="route-val">시간의 신전 최종 사냥터 (남둥 / 신관 / 수호대장)</span></li>
+                <li><span class="route-key">템 스위칭</span><span class="route-val">캐스터스/크리븐 교체 + 정석 스탯 전환 타이밍</span></li>
+                <li><span class="route-key">잠재 강화</span><span class="route-val">100+ 몬스터 사냥 시 수상한 큐브 파밍 완화 → 잠재 스펙업 병행</span></li>
+              </ul>
+            </article>
+          </li>
+        </ol>
+
+        <article class="card tip-card">
+          <h3 class="card-title">동선 운영 핵심 팁</h3>
+          <ul class="bullets">
+            <li><strong>30레벨 차이 페널티</strong> · 95레벨 미만 몬스터 사냥 시 캐릭과 30+ 차이나면 메소 2배 보정 해제. 레벨 맞게 순회.</li>
+            <li><strong>순간이동의 돌 + 유저 리스트</strong> · 특정 사냥터에 있는 유저 닉네임을 입력해 대륙간 배 없이 즉시 텔레포트.</li>
+            <li><strong>닥사 지양</strong> · 25~45 구간에서는 큐브/혼돈 주문서를 노리고 후반 자본을 선제적으로 마련.</li>
+            <li><strong>헤이스트 활용</strong> · 투컴 버프가 불가능한 환경에서 헤이스트는 사냥터 순회 전체 효율을 좌우.</li>
+          </ul>
+        </article>
+
+        <footer class="sources">
+          <h4>참고 자료</h4>
+          <ul>
+            <li><a href="https://namu.wiki/w/%EB%A9%94%EC%9D%B4%ED%94%8C%20%ED%94%8C%EB%9E%98%EB%8B%9B/%EC%82%AC%EB%83%A5%ED%84%B0" target="_blank" rel="noopener">메이플 플래닛 / 사냥터 — 나무위키</a></li>
+            <li><a href="https://namu.wiki/w/%EB%A9%94%EC%9D%B4%ED%94%8C%20%ED%94%8C%EB%9E%98%EB%8B%9B" target="_blank" rel="noopener">메이플 플래닛 — 나무위키 (개인화 필드 / 30레벨 페널티)</a></li>
+            <li><a href="https://www.youtube.com/shorts/cFPVz1l-3DI" target="_blank" rel="noopener">Newbie Leveling Guide | MaplePlanet — YouTube Shorts</a></li>
+            <li><a href="https://www.youtube.com/watch?v=Fc4ZgDz6bIk" target="_blank" rel="noopener">메이플 플래닛 썬콜 육성 공략 (사냥 시스템 참고) — YouTube</a></li>
+          </ul>
+        </footer>
+      </div>
+    </section>
+
+    <!-- ====================== COMMUNITY ====================== -->
+    <section id="community" class="section section-tinted">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-eyebrow">05 · COMMUNITY</span>
+          <h2 class="section-title">커뮤니티 & 참고 자료</h2>
+          <p class="section-desc">
+            본 가이드 작성에 참고한 위키, 공식 페이지, 영상 자료 전부를 모았습니다.
+            깊이 있는 정보는 원본 출처에서 확인하세요.
+          </p>
+        </header>
+
+        <div class="ref-grid">
+          <article class="card ref-card">
+            <span class="ref-tag">위키</span>
+            <h3>나무위키 · 데이터</h3>
+            <ul class="ref-list">
+              <li><a href="https://namu.wiki/w/%EB%A9%94%EC%9D%B4%ED%94%8C%20%ED%94%8C%EB%9E%98%EB%8B%9B" target="_blank" rel="noopener">메이플 플래닛 본문</a></li>
+              <li><a href="https://namu.wiki/w/%EB%A9%94%EC%9D%B4%ED%94%8C%20%ED%94%8C%EB%9E%98%EB%8B%9B/%EC%A7%81%EC%97%85/%EB%82%98%EC%9D%B4%ED%8A%B8%EB%A1%9C%EB%93%9C" target="_blank" rel="noopener">메이플 플래닛 / 직업 / 나이트로드</a></li>
+              <li><a href="https://namu.wiki/w/%EB%A9%94%EC%9D%B4%ED%94%8C%20%ED%94%8C%EB%9E%98%EB%8B%9B/%EC%82%AC%EB%83%A5%ED%84%B0" target="_blank" rel="noopener">메이플 플래닛 / 사냥터</a></li>
+            </ul>
+          </article>
+
+          <article class="card ref-card">
+            <span class="ref-tag">공식</span>
+            <h3>공식 페이지</h3>
+            <ul class="ref-list">
+              <li><a href="https://maplestoryworlds.nexon.com/ko/play/64b9fefe2f664c189a4c1be40b6e8062/" target="_blank" rel="noopener">메이플 플래닛 — 메이플스토리 월드</a></li>
+            </ul>
+          </article>
+
+          <article class="card ref-card">
+            <span class="ref-tag">표도 영상</span>
+            <h3>표창도적 공략 영상</h3>
+            <ul class="ref-list">
+              <li><a href="https://www.youtube.com/watch?v=r5ywMtXe3BQ" target="_blank" rel="noopener">Lv.1~Lv.50 올럭표도 가성비 템 세팅 [메이플랜드]</a></li>
+              <li><a href="https://www.youtube.com/watch?v=63PejPxF9Eg" target="_blank" rel="noopener">[메이플랜드] 뉴비 표도 템셋팅 가이드</a></li>
+              <li><a href="https://www.youtube.com/watch?v=zJ8KiltY1AM" target="_blank" rel="noopener">[메이플랜드] 무자본 표도 1~60렙 정리</a></li>
+              <li><a href="https://www.youtube.com/watch?v=50M9a34AthQ" target="_blank" rel="noopener">[메이플랜드] 초보 도적 1~40 육성 &amp; 스킬트리</a></li>
+              <li><a href="https://www.youtube.com/watch?v=8rI_koizkt8" target="_blank" rel="noopener">표창 던지는 단검도적 [1~30Lv.]</a></li>
+              <li><a href="https://www.youtube.com/watch?v=7RekKYfz7xM" target="_blank" rel="noopener">메이플 플레임 표창 노가다 6시간</a></li>
+            </ul>
+          </article>
+
+          <article class="card ref-card">
+            <span class="ref-tag">시스템 영상</span>
+            <h3>시스템 · 일반 영상</h3>
+            <ul class="ref-list">
+              <li><a href="https://www.youtube.com/shorts/odd7SjVNB9Q" target="_blank" rel="noopener">메이플플래닛 미확인 아이템 큐브 시스템</a></li>
+              <li><a href="https://www.youtube.com/shorts/cFPVz1l-3DI" target="_blank" rel="noopener">Newbie Leveling Guide | MaplePlanet</a></li>
+              <li><a href="https://www.youtube.com/watch?v=Fc4ZgDz6bIk" target="_blank" rel="noopener">메이플 플래닛 썬콜 육성 공략 (시스템 참고)</a></li>
+              <li><a href="https://www.youtube.com/watch?v=m_Rwa_W33Es" target="_blank" rel="noopener">메이플 플래닛 무자본 썬콜 육성 (시스템 참고)</a></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="24" height="24">
+            <rect width="32" height="32" rx="9" fill="#FFB800" />
+            <path
+              d="M16 5 L18.2 12.4 L25.8 11.4 L20.2 16 L25.8 20.6 L18.2 19.6 L16 27 L13.8 19.6 L6.2 20.6 L11.8 16 L6.2 11.4 L13.8 12.4 Z"
+              fill="#FFFFFF"
+            />
+          </svg>
+        </span>
+        <div>
+          <p class="footer-name">표도 노트</p>
+          <p class="footer-sub">메이플 플래닛 표창도적 정석 육성 가이드</p>
+        </div>
+      </div>
+
+      <p class="footer-disc">
+        본 사이트는 비공식 팬 가이드입니다. 모든 정보는 커뮤니티 자료와 위키를
+        정리한 것으로, 실제 인게임 사양과 다를 수 있습니다. 정확한 정보는 각
+        항목의 원본 출처를 확인해 주세요.
+      </p>
+
+      <p class="footer-meta">
+        <span>최종 업데이트 2026 · 05 · 28</span>
+        <span class="dot-sep">·</span>
+        <span>Built with care for 표도</span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>
