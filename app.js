@@ -23,8 +23,8 @@
     });
   });
 
-  // Active section indicator in top nav
-  const navLinks = document.querySelectorAll('.site-nav a');
+  // Active section indicator in section-bar (scrollspy)
+  const navLinks = document.querySelectorAll('.section-bar-inner a');
   const sections = Array.from(navLinks)
     .map((a) => document.querySelector(a.getAttribute('href')))
     .filter(Boolean);
@@ -34,6 +34,20 @@
       Array.from(navLinks).map((a) => [a.getAttribute('href').slice(1), a]),
     );
 
+    const navContainer = document.querySelector('.section-bar-inner');
+
+    // Smoothly center the active pill within the horizontal scroll area
+    // without scrolling the entire page.
+    const scrollNavToActive = (link) => {
+      if (!navContainer) return;
+      const navRect = navContainer.getBoundingClientRect();
+      const linkRect = link.getBoundingClientRect();
+      const navMid = navRect.left + navRect.width / 2;
+      const linkMid = linkRect.left + linkRect.width / 2;
+      const delta = linkMid - navMid;
+      navContainer.scrollBy({ left: delta, behavior: 'smooth' });
+    };
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -42,10 +56,11 @@
           if (entry.isIntersecting) {
             navLinks.forEach((l) => l.classList.remove('is-active'));
             link.classList.add('is-active');
+            scrollNavToActive(link);
           }
         });
       },
-      { rootMargin: '-40% 0px -55% 0px', threshold: 0 },
+      { rootMargin: '-30% 0px -60% 0px', threshold: 0 },
     );
 
     sections.forEach((section) => observer.observe(section));

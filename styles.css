@@ -64,7 +64,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 84px;
+  scroll-padding-top: 68px;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -122,17 +122,53 @@ img, svg { display: block; }
 .skip-link:focus { left: 0; }
 
 /* ============================================
-   Header
+   Header (brand row — NOT sticky, lives at top only)
    ============================================ */
 .site-header {
+  position: relative;
+  z-index: 30;
+  background: transparent;
+}
+
+/* ============================================
+   Section nav bar — sticky popup that follows scroll
+   ============================================ */
+.section-bar {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: saturate(180%) blur(12px);
-  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: saturate(180%) blur(14px);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
   border-bottom: 1px solid var(--border);
+  box-shadow: 0 4px 18px rgba(17, 24, 39, 0.04);
 }
+
+.section-bar-inner {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 52px;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--pad-x);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  /* Subtle fade hint at edges so user knows it's scrollable */
+  -webkit-mask-image: linear-gradient(90deg,
+    transparent 0,
+    #000 calc(var(--pad-x) - 4px),
+    #000 calc(100% - var(--pad-x) + 4px),
+    transparent 100%);
+          mask-image: linear-gradient(90deg,
+    transparent 0,
+    #000 calc(var(--pad-x) - 4px),
+    #000 calc(100% - var(--pad-x) + 4px),
+    transparent 100%);
+}
+.section-bar-inner::-webkit-scrollbar { display: none; }
 
 .header-inner {
   display: flex;
@@ -177,12 +213,6 @@ img, svg { display: block; }
   font-weight: 500;
 }
 
-.site-nav {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
 .site-nav a {
   display: inline-flex;
   align-items: center;
@@ -192,7 +222,9 @@ img, svg { display: block; }
   color: var(--text);
   font-weight: 600;
   font-size: 14px;
-  transition: all 0.15s var(--ease);
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background-color 0.15s var(--ease), color 0.15s var(--ease);
 }
 
 .site-nav a:hover {
@@ -200,30 +232,26 @@ img, svg { display: block; }
   color: var(--text-strong);
 }
 
+/* Currently-viewed section: prominent pill */
 .site-nav a.is-active {
   background: var(--maple-soft);
   color: var(--maple-deep);
+  box-shadow: inset 0 0 0 1px rgba(255, 184, 0, 0.20);
+}
+.theme-cold .site-nav a.is-active {
+  background: var(--blue-soft);
+  color: var(--blue-strong);
+  box-shadow: inset 0 0 0 1px rgba(49, 130, 246, 0.22);
 }
 
 @media (max-width: 720px) {
   .brand-sub { display: none; }
   .brand-name { font-size: 16px; }
-  .site-nav {
-    overflow-x: auto;
-    min-width: 0;
-    flex: 1 1 auto;
-    justify-content: flex-end;
-    scrollbar-width: none;
-    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 20px, #000 calc(100% - 20px), transparent 100%);
-            mask-image: linear-gradient(90deg, transparent 0, #000 20px, #000 calc(100% - 20px), transparent 100%);
-  }
-  .site-nav::-webkit-scrollbar { display: none; }
+  .section-bar-inner { height: 48px; }
   .site-nav a {
     height: 34px;
     padding: 0 12px;
     font-size: 13px;
-    white-space: nowrap;
-    flex-shrink: 0;
   }
 }
 
@@ -231,6 +259,7 @@ img, svg { display: block; }
   .header-inner { height: 56px; }
   .brand-mark svg { width: 24px; height: 24px; }
   .brand-name { font-size: 15px; }
+  .section-bar-inner { height: 46px; }
   .site-nav a {
     height: 32px;
     padding: 0 10px;
@@ -1791,7 +1820,7 @@ img, svg { display: block; }
    Responsive — Mobile refinements
    ============================================ */
 @media (max-width: 720px) {
-  html { scroll-padding-top: 72px; }
+  html { scroll-padding-top: 60px; }
 
   /* Hero */
   .hero { padding: 56px 0 56px; }
